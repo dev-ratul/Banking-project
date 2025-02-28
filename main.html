@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+    <!-- 1st-section -->
+    <section class="max-w-md min-h-screen mx-auto py-10 bg-gray-200">
+        <header class="m-2">
+            <nav class="flex justify-between items-center border-b">
+                <div class="flex items-center">
+                    <img class="w-15" src="assets/Group.png" alt="">
+                    <div>
+                        <h1 class="text-2xl font-bold">$<span id="mainBalance">100</span></h1>
+                        <p class="text-[#080808] opacity-50">Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn">Logout</button>
+                </div>
+                
+            </nav>
+        </header>
+        <main class="m-4">
+            <!-- 2nd-section -->
+            <section class="mt-6">
+                <div>
+                    <h1 class="font-bold text-2xl">Welcome to Payooo!</h1>
+                    <p class="text-black opacity-50 ">
+                        Enjoy easy and convenient financial services with us. Cashout charge is low and 
+                    </p>
+                </div>
+                <!-- 2nd div -->
+                 <div class="grid grid-cols-3 gap-2 mt-8">
+                    <!-- addMoney-box -->
+                    <div id="addMoney-box" class="border rounded-xl text-center p-4">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p class="text-[14px]">Add Money</p>
+                    </div>
+                    <!-- cashOut -->
+                    <div id="cashOut-box" class="border rounded-xl  text-center p-4">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p  class="text-[14px]">Cashout</p>
+                    </div>
+                    <!-- transferMoney-box -->
+                    <div id="transferMoney-box" class="border rounded-xl  text-center p-4">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p class="text-[14px]">Transfer Money</p>
+                    </div>
+                    <!-- getBonus-box -->
+                    <div id="getBonus-box" class="border rounded-xl text-center p-4">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p class="text-[14px]">Get Bonus</p>
+                    </div>
+                    <!-- payBill-box -->
+                    <div id="payBill-box" class="border rounded-xl  text-center p-4">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p class="text-[14px]">Pay Bill</p>
+                    </div>
+                    <!-- transaction-box -->
+                    <div id="transaction-box" class="border rounded-xl  text-center p-4">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p class="text-[14px]">Transactions</p>
+                    </div>
+                 </div>
+            </section>
+            <!-- 3rd-section -->
+             <!-- Add-money section -->
+             <section id="addMoney" class="">
+                <h1>Add Money</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <legend>Select Bank</legend>
+                            <select class="select">
+                                <option disabled selected>Select Bank</option>
+                                <option value="Bkash">bkash</option>
+                                <option value="nagad">nagad</option>
+                                <option value="dbbl">DBBL</option>
+                              </select>
+                          <fieldset class="fieldset">
+                            <!-- 1st-input -->
+                            <label class="fieldset-label">Mobile Number</label>
+                            <input id="num" value="01784773949" type="number" class="input" placeholder="Enter Your Number" required />
+                            <!-- 2nd-input -->
+                            <label class="fieldset-label">Amount</label>
+                            <input id="amount" type="number" class="input" placeholder="Add Amount to withdraw" required />
+                            <!-- 3rd-input -->
+                            <label class="fieldset-label">Type Your Amount</label>
+                            <input id="pin" value="1234" type="number" class="input" placeholder="Enter 4 Digit Pin" required />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <!-- Btn -->
+                            <button id="addMoney-btn" class="btn bg-blue-700 text-white border-none mt-4">Add Money</button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
+             <!-- 4th section -->
+            <!-- cash-out -->
+             <section id="cashOut" class="">
+                <h1>Cashout</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                          <fieldset class="fieldset">
+                            <!-- 1st-input -->
+                            <label class="fieldset-label">Mobile Number</label>
+                            <input id="num" value="01784773949" type="number" class="input" placeholder="Enter Your Number" required />
+                            <!-- 2nd-input -->
+                            <label class="fieldset-label">Amount</label>
+                            <input id="amount" type="number" class="input" placeholder="Enter amount to withdraw" required />
+                            <!-- 3rd-input -->
+                            <label class="fieldset-label">Type Your Amount</label>
+                            <input id="pin" value="1234" type="number" class="input" placeholder="Enter 4 Digit Pin" required />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <!-- Btn -->
+                            <button id="addMoney-btn" class="btn bg-blue-700 text-white border-none mt-4">Add Money</button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
+             <!-- 4th section -->
+            <!-- transferMoney -->
+             <section id="transferMoney" class="">
+                <h1>Cashout</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                          <fieldset class="fieldset">
+                            <!-- 1st-input -->
+                            <label class="fieldset-label">Mobile Number</label>
+                            <input id="num" value="01784773949" type="number" class="input" placeholder="Enter Your Number" required />
+                            <!-- 2nd-input -->
+                            <label class="fieldset-label">Amount</label>
+                            <input id="amount" type="number" class="input" placeholder="Enter amount to transfer" required />
+                            <!-- 3rd-input -->
+                            <label class="fieldset-label">Type Your Amount</label>
+                            <input id="pin" value="1234" type="number" class="input" placeholder="Enter 4 Digit Pin" required />
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <!-- Btn -->
+                            <button id="addMoney-btn" class="btn bg-blue-700 text-white border-none mt-4">Add Money</button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
+             <!-- 5th section -->
+            <!-- Get Bonus -->
+             <section id="getBonus" class="">
+                <h1>Get Bonus</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                          <fieldset class="fieldset">
+                            <!-- 1st-input -->
+                            <label class="fieldset-label">Enter Bonus Coupon</label>
+                            <input id="num" type="number" class="input" placeholder="Enter Your Number" required />
+                            
+                            <!-- Btn -->
+                            <button id="addMoney-btn" class="btn bg-blue-700 text-white border-none mt-4">Get Bonus</button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
+
+             <!-- 6th section -->
+            <!-- Pay Bill -->
+            <section id="payBill" class="">
+              <h1>Pay Bill</h1>
+              <div class="">
+                  <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                      <div class="card-body">
+                          <legend>Select Bank</legend>
+                          <select class="select">
+                              <option disabled selected>Select Bank</option>
+                              <option value="Bkash">bkash</option>
+                              <option value="nagad">nagad</option>
+                              <option value="dbbl">DBBL</option>
+                            </select>
+                        <fieldset class="fieldset">
+                          <!-- 1st-input -->
+                          <label class="fieldset-label">Mobile Number</label>
+                          <input id="num" value="01784773949" type="number" class="input" placeholder="Enter Your Number" required />
+                          <!-- 2nd-input -->
+                          <label class="fieldset-label">Amount to Pay</label>
+                          <input id="amount" type="number" class="input" placeholder="Add Amount to pay" required />
+                          <!-- 3rd-input -->
+                          <label class="fieldset-label">Type Your Amount</label>
+                          <input id="pin" value="1234" type="number" class="input" placeholder="Enter 4 Digit Pin" required />
+                          <div><a class="link link-hover">Forgot password?</a></div>
+                          <!-- Btn -->
+                          <button id="addMoney-btn" class="btn bg-blue-700 text-white border-none mt-4">Pay Now</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+           </section>
+
+             
+        </main>
+    </section>
+    
+    <script src="js/addMoney.js"></script>
+    <script src="js/transection.js"></script>
+     
+</body>
+</html>
